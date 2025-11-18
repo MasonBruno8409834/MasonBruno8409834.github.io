@@ -27,77 +27,20 @@ $(function () {  // initialize canvas and context when able to
 
     // TODO 1 - Enable the Grid
      toggleGrid();
-     $(function () {  // initialize canvas and context when able to
-  canvas = document.getElementById("canvas");
-  ctx = canvas.getContext("2d");
-  window.addEventListener("load", loadJson);
 
-  function setup() {
-    if (firstTimeSetup) {
-      halleImage = document.getElementById("player");
-      projectileImage = document.getElementById("projectile");
-      cannonImage = document.getElementById("cannon");
-      $(document).on("keydown", handleKeyDown);
-      $(document).on("keyup", handleKeyUp);
-      firstTimeSetup = false;
-      //start game
-      setInterval(main, 1000 / frameRate);
-    }
-
-    // Create walls - do not delete or modify this code
-    createPlatform(-50, -50, canvas.width + 100, 50); // top wall
-    createPlatform(-50, canvas.height - 10, canvas.width + 100, 200, "navy"); // bottom wall
-    createPlatform(-50, -50, 50, canvas.height + 500); // left wall
-    createPlatform(canvas.width, -50, 50, canvas.height + 100); // right wall
-
-    //////////////////////////////////
-    // ONLY CHANGE BELOW THIS POINT //
-    //////////////////////////////////
-
-    // TODO 1 - Enable the Grid
-     //toggleGrid(); $(function () {  // initialize canvas and context when able to
-  canvas = document.getElementById("canvas");
-  ctx = canvas.getContext("2d");
-  window.addEventListener("load", loadJson);
-
-  function setup() {
-    if (firstTimeSetup) {
-      halleImage = document.getElementById("player");
-      projectileImage = document.getElementById("projectile");
-      cannonImage = document.getElementById("cannon");
-      $(document).on("keydown", handleKeyDown);
-      $(document).on("keyup", handleKeyUp);
-      firstTimeSetup = false;
-      //start game
-      setInterval(main, 1000 / frameRate);
-    }
-
-    // Create walls - do not delete or modify this code
-    createPlatform(-50, -50, canvas.width + 100, 50); // top wall
-    createPlatform(-50, canvas.height - 10, canvas.width + 100, 200, "navy"); // bottom wall
-    createPlatform(-50, -50, 50, canvas.height + 500); // left wall
-    createPlatform(canvas.width, -50, 50, canvas.height + 100); // right wall
-
-    //////////////////////////////////
-    // ONLY CHANGE BELOW THIS POINT //
-    //////////////////////////////////
-
-    // TODO 1 - Enable the Grid
-     toggleGrid(); 
 
     // TODO 2 - Create Platforms
-createPlatform(800,617,100, 10);
-createPlatform(550,500,100, 10);
-createPlatform(350,400,100, 10);
-createPlatform(250,420,100,10);
-createPlatform(150,600,100,10);
+    createPlatform(800,617,100, 10);
+    createPlatform(550,500,100, 10);
+    createPlatform(350,400,100, 10);
+    createPlatform(250,420,100,10);
+    createPlatform(150,600,100,10);
 
-    
 
 
 
     // TODO 3 - Create Collectables
-createCollectable("diamond",600,50);
+createCollectable("diamond",600,400);
 createCollectable("steve",450,700);
 createCollectable("kennedi",500,600);
 createCollectable("grace" ,450,400)
@@ -106,57 +49,10 @@ createCollectable("grace" ,450,400)
 
    
     // TODO 4 - Create Cannons
-createCannon("top" ,450 600)
-createCannon("bottom", 700, 600)
+    createCannon("top", 450, 600)
+    createCannon("bottom" ,700, 600)
+    createCannon("left" ,500 ,600)
 
-
-
-   
-   
-    //////////////////////////////////
-    // ONLY CHANGE ABOVE THIS POINT //
-    //////////////////////////////////
-  }
-
-  registerSetup(setup);
-});
-
-
-    // TODO 2 - Create Platforms
-    
-
-
-
-    // TODO 3 - Create Collectables
-
-
-
-   
-    // TODO 4 - Create Cannons
-
-
-   
-   
-    //////////////////////////////////
-    // ONLY CHANGE ABOVE THIS POINT //
-    //////////////////////////////////
-  }
-
-  registerSetup(setup);
-});
-
-
-    // TODO 2 - Create Platforms
-    
-
-
-
-    // TODO 3 - Create Collectables
-
-
-
-   
-    // TODO 4 - Create Cannons
 
 
    
